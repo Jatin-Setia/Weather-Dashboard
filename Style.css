@@ -1,0 +1,1134 @@
+
+@media (max-width: 1024px) {
+  .nav { gap: 60px; padding: 15px; }
+  .navitems { gap: 40px; }
+  .HeroHead { flex-direction: column; padding: 100px 40px; text-align: center; gap: 40px; }
+  .vrline { width: 200px; height: 5px; }
+  .HeroHeading { font-size: 50px; }
+  .HeroSubHeading { padding: 20px 40px; }
+  .ContainerCards { gap: 60px; }
+  .AboutContainer { gap: 60px; }
+  .AboutIcon { font-size: 150px; }
+  .MapForecastRow { flex-direction: column; }
+  .FooterFlex { flex-wrap: wrap; gap: 50px; }
+  .Footerbrand { margin-left: 0; }
+}
+
+@media (max-width: 768px) {
+  .navitems { gap: 20px; }
+  .navitems a { font-size: 13px; }
+  .HeroHeading { font-size: 36px; }
+  .HeroSubHeading { font-size: 13px; padding: 10px 20px; }
+  .Forecast { padding-left: 0; }
+  .Forecast button { padding: 25px; font-size: 18px; }
+  .SectionHead, .TrueSectionHead, .ForecastSectionHead, .FeatureSectionHead {
+    font-size: 28px;
+    letter-spacing: 2px;
+  }
+  .glass {
+    width: 92vw;
+    max-width: 400px;
+    height: auto;
+    min-height: 420px;
+    padding-bottom: 30px;
+  }
+  .Loc { font-size: 20px; top: 25px; }
+  .Date { font-size: 14px; top: 60px; }
+  .WeatherDesc { font-size: 10px; right: 15px; top: 20px; padding: 6px 8px; }
+  .TempContainer { width: 90%; top: 110px; }
+  .BigTemp { font-size: 36px; margin-left: 0; }
+  .TempC, .TempF { height: 45px; width: 45px; font-size: 15px; }
+  .ContainerFlexCards {
+    position: static;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 180px;
+    padding: 0 10px;
+  }
+  .Card { height: 100px; width: 90px; }
+  .ContainerCards { gap: 30px; }
+  .GlassCard { width: 85vw; max-width: 340px; height: 340px; }
+  .FeatureContainer { gap: 20px; }
+  .FeatureCard { padding: 25px; }
+  .AboutContainer { flex-direction: column; text-align: center; }
+  .AboutIcon { font-size: 100px; }
+  .FooterFlex { flex-direction: column; gap: 30px; padding-top: 30px; }
+  .footercols { align-items: center; }
+}
+
+@media (max-width: 480px) {
+  .nav { gap: 20px; }
+  .navitems { gap: 12px; }
+  .navitems a { font-size: 11px; }
+  .SearchBar { padding: 12px 45px 12px 15px; font-size: 13px; width: 60vw; }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-image: url("BGW.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    backdrop-filter: contrast(120%) saturate(130%) grayscale(20%) brightness(100%);
+
+}
+.nav{
+    margin: 0;
+    padding: 20px;
+    border-spacing: 30px;
+    display: flex;
+    align-items: center;
+    gap: 200px;
+}
+.cloud{
+    font-size: 75px;
+    color: #000000;
+    
+
+    text-shadow:
+        0 0 6px #38bdf8,
+        0 0 18px #3b82f6;
+}
+.cloud:hover{
+    color: cyan;
+}
+.navitems{
+    display: flex;
+    gap: 200px;
+}
+
+.navitems a{
+    display: flex;
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 17.5px;
+    line-height: 1;
+    color: white;
+    opacity: 70%;
+}
+.navitems a:hover{
+    color: red;
+    text-shadow: 
+    0 0 3px rgb(255, 91, 91),
+    0 0 6px rgb(255, 46, 46);
+    opacity: 100%;
+    transition: 0.4s;
+}
+.HeroHead {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 200px 113px;
+    align-items: center;
+    display: flex;
+    justify-items: center;
+}
+.displaycontainerblock{
+    display: block;
+}
+.HeroHeading{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80px;
+    font-weight: 800;
+text-shadow:
+    0 0 3px red,
+    0 0 8px #fb7185,
+    0 0 16px #f97316,
+    0 0 28px rgba(249,115,22,0.25)   ;
+    color: orange;
+    opacity: 100%;
+    letter-spacing: 2px;
+}
+.HeroSubHeading{
+    color: grey;
+    font-size: 15px;
+    text-shadow: 
+        0 0 10px grey,
+        0 0 20px darkgrey,
+        0 0 40px black;
+    padding: 50px 250px;
+    letter-spacing: 2px;
+}
+.vrline{
+    height: 200px;
+    width: 5px;
+    border-radius: 30px;
+    background: rgb(0, 145, 255);
+    box-shadow:
+     0 0 20px rgb(37, 139, 255),
+     0 0 40px rgb(0, 238, 255);
+}
+.Forecast{
+    padding-left: 100px;
+}
+.Forecast button{
+    font-family: "Orbitron", sans-serif;
+    padding: 50px;
+    border-radius: 60px;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    font-size: 30px;
+    font-weight: 200;
+    text-shadow: 
+        0 0 10px white,
+        0 0 20px white;
+    color: aliceblue;
+    border:  1px solid;
+    cursor: pointer;
+    animation: ForecastBox 20s ease-in-out infinite;
+    background: linear-gradient(45deg, rgb(0, 0, 0),rgb(1, 1, 33));
+}
+@keyframes ForecastBox{
+    0% {
+        border-color: violet;
+        box-shadow: 
+            0 0 3px violet,
+            0 0 6px rgb(240, 81, 240),
+            0 0 10px rgb(248, 2, 248);
+    }
+    15% {
+        border-color: indigo;
+        box-shadow: 
+            0 0 3px rgb(149, 2, 255),
+            0 0 6px indigo,
+            0 0 10px rgb(54, 0, 93);
+    }
+    30% {
+        border-color: blue;
+        box-shadow: 
+            0 0 3px rgb(45, 45, 255),
+            0 0 6px blue,
+            0 0 10px rgb(0, 0, 165);
+    }
+    45% {
+        border-color: yellow;
+        box-shadow: 
+            0 0 3px rgb(255, 255, 117),
+            0 0 6px rgb(255, 255, 37),
+            0 0 10px rgb(255, 255, 0);
+    }
+    60% {
+        border-color: orange;
+        box-shadow: 
+            0 0 3px rgb(255, 193, 78),
+            0 0 6px rgb(255, 176, 30),
+            0 0 10px orange;
+    }
+    75% {
+        border-color: red;
+        box-shadow: 
+            0 0 3px rgb(255, 60, 60),
+            0 0 6px rgb(251, 14, 14),
+            0 0 10px rgb(210, 0, 0);
+    }
+    90% {
+        border-color: green;
+        box-shadow: 
+            0 0 3px rgb(0, 255, 0),
+            0 0 6px rgb(0, 182, 0),
+            0 0 10px green;
+    }
+    100% {
+        border-color: rgb(227, 164, 227);
+        box-shadow: 
+            0 0 3px rgb(246, 169, 246),
+            0 0 6px rgb(240, 81, 240),
+            0 0 10px rgb(248, 2, 248);
+    }
+}
+.SectionDark{
+    background: rgba(0, 0, 0, 0.4);
+}
+.WeatherContainerBlock{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+.SearchBar{
+    border-radius: 40px;
+    border-color: #38bdf8;
+    box-shadow: 
+        0 0 3px rgb(100, 255, 255),
+        0 0 6px rgb(28, 255, 255),
+        0 0 9px cyan;    
+    background-color: rgb(43, 43, 43);
+    padding: 15px 55px 15px 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+.SearchBar::placeholder{
+    align-items: center;
+    color: white;
+    font-size: 13px;
+    text-shadow: 0 0 1px white,
+        0 0 2px white;
+    opacity: 100%;
+}
+.srchbtn{
+    background-color: rgb(234, 172, 57);
+    color: #000000;
+    text-align: center;
+    font-weight: 200;
+    border-radius: 50px;
+    border-color: yellow;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 2px rgb(200, 131, 1),
+    0 0 4px orange,
+    0 0 6px orange;
+    position: absolute;
+    right: 8px;
+}
+.SearchWrapper {
+    position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.glass{
+    width: 570px;
+    height: 480px;
+    border-radius: 40px;
+    position: relative;
+    box-shadow: 0 0 10px black;
+
+    background: rgba(10, 14, 30, 0.45);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.Loc{
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    text-shadow: 0 0 3px white;
+    letter-spacing: 3px;
+    word-spacing: 2px;
+}
+.Date{
+    position: absolute;
+    left: 20px;
+    top: 90px;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.176);
+    letter-spacing: 3px;
+    word-spacing: 2px;
+
+}
+.TempContainer{
+    display: flex;
+    color: white;
+    letter-spacing: 3px;
+    left: 50%;
+    top: 180px;
+    position: absolute;
+    justify-content: space-between;
+    width: 480px;
+    transform: translateX(-50%);
+
+}
+.TempC, .TempF{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: rgba(47, 46, 46, 0.6);
+    height: 60px;
+    width: 60px;
+    border-radius: 20px;
+    font-size: 20px;
+    color: orange;
+
+}
+.TempC.active{
+    opacity: 100%;
+    background-color: rgba(149, 199, 255, 0.5);
+    box-shadow: 0 0 3px rgba(0, 191, 255 ,0.3),
+        0 0 6px rgba(0, 106, 255 ,0.3);
+    color: pink;
+    font-size: 20px;
+    text-shadow: 0 0 3px rgb(235, 108, 255),
+        0 0 6px rgb(255, 0, 217);
+    border: 1px solid black;
+}
+.TempF.active{
+    opacity: 100%;
+    background-color: rgba(149, 199, 255, 0.5);
+    box-shadow: 0 0 3px rgba(0, 191, 255 ,0.3),
+        0 0 6px rgba(0, 106, 255 ,0.3);
+    color: pink;
+    font-size: 20px;
+    text-shadow: 0 0 3px rgb(235, 108, 255),
+        0 0 6px rgb(255, 0, 217);
+    border: 1px solid black;
+}
+
+.ContainerFlexCards{
+    display: flex;
+    gap: 70px;
+    position: absolute;
+    top: 310px;
+    left: 35px;
+
+}
+.Card{
+    background-color: rgba(0, 187, 255, 0.3);
+    border-radius: 20px;
+    border: 1px solid black;
+    height: 130px;
+    width: 120px;
+    box-shadow: 0 0 3px black;
+
+    position: relative;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.CardIcon{
+    font-size: 28px;
+    color: #7dd3fc;
+    text-shadow:
+        0 0 8px rgba(56,189,248,.7);
+    margin-top: 13px;
+    margin-bottom: 8px;
+
+}
+.CardTitle{
+    color:rgb(0, 157, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0 0 1px cyan,
+    0 0 2px aqua;
+    letter-spacing: 2px;
+    text-align: center;
+    justify-content: center;
+    font-size: 13px;
+    margin-top: 5px;
+}
+.CardFetch{
+    margin-top: 10px;
+    color: pink;
+    text-shadow: 0 0 2px white;
+    font-size: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.BigTemp{
+    font-size: 55px;
+    font-weight: 300;
+    color: white;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+    margin-left: 40px;
+}
+.SectionDivider{
+    width: 200px;
+    border-radius: 40px;
+    height: 5px;
+    color: pink;
+    background: pink;
+    box-shadow:
+        0 0 10px rgb(255, 33, 70),
+        0 0 20px rgb(255, 95, 122),
+        0 0 30px pink;
+    margin: 80px auto;
+}
+.Bg{
+    display: flex;
+}
+
+.JCSB{
+    justify-content: space-between;
+    display: flex;
+    width: 550px;
+}
+.WeatherDesc{
+    border-radius: 40px;
+    width: fit-content;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    text-shadow:
+        0 0 3px rgb(255, 0, 217),
+        0 0 8px #fb71e2,
+        0 0 16px #8416f9,
+        0 0 28px rgba(249, 22, 139, 0.25);
+    box-shadow: 
+        0 0 3px darkblue,
+        0 0 8px aqua,
+        0 0 16px blue,
+        0 0 28px rgba(33, 30, 249, 0.25);
+    position: absolute;
+    right: 30px;
+    top: 40px;
+    color: peachpuff;
+    font-family: "Orbitron", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px 10px;
+    animation: borderCycle 8s linear infinite;
+}
+.opac0{
+    opacity: 0%;
+}
+.ContainerCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    gap: 200px;
+}
+.GlassCard{
+    background: rgba(4, 24, 41, 0.752);
+    height: 400px;
+    width: 400px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgb(23, 182, 250),
+        0 0 20px black;
+    border: 1px solid cyan;
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.GlassCard:hover {
+  border-color: cyan;
+  box-shadow: 0 0 20px rgba(0,255,255,0.2);
+  background: rgba(0,255,255,0.12);
+}
+.InfoSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+.GridBG{
+    background: rgba(0, 0, 0, 0.4);
+}
+.Gicon{
+    text-align: center;
+    padding: 80px 60px 60px;
+    color: white;
+    font-size: 40px;
+    transition: transform 0.3s, text-shadow 0.3s;
+}
+
+.GlassCard:hover .Gicon {
+  transform: scale(1.4);
+  text-shadow: 0 0 20px cyan, 0 0 40px rgba(0,255,255,0.5);
+}
+.Gtitle{
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: cyan;
+    text-shadow: 0 0 8px cyan, 0 0 16px rgba(0,255,255,0.4);
+    padding: 0 20px;
+    margin-bottom: 32px;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 3px;
+    
+}
+.Gtext{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    color: rgba(200, 220, 255, 0.55);
+    padding: 0 24px;
+}
+@keyframes zoomPop {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.1); }
+  70%  { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+.cardClicked {
+  animation: zoomPop 0.4s ease;
+}
+@keyframes borderCycle {
+  0%,100% { box-shadow: 0 0 18px rgba(0,255,255,1); border-color: rgba(0,255,255,1); }
+  50%      { box-shadow: 0 0 26px rgba(255,105,180,1); border-color: rgba(255,105,180,1); }
+}
+.Footer{
+    border-top: 1px solid rgba(0, 28, 48, 0.4);
+    padding: 30px;
+    background-color: rgba(1, 13, 30, 0.922);
+}
+.FooterFlex{
+    display: flex;
+    gap: 100px;
+    border-top:1px solid rgba(255,255,255,.08);
+    padding-top: 60px;
+}
+.Footerbrand{
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+    gap: 45px;
+}
+.BrandName{
+    font-family: 'Orbitron', sans-serif;
+    color: cyan;
+    text-shadow: 0 0 8px rgb(12, 129, 129),
+    0 0 15px cyan,
+    0 0 22px cyan,
+    0 0 32px cyan;
+    font-size: 30px;
+}
+.BrandDef{
+    color: grey;
+    font-weight: 500;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 15px;
+    flex-wrap: wrap;
+    letter-spacing: 1px;
+    max-width: 400px;
+    line-height: 1.7;
+}
+.footercols{
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+}
+.footercols h4{
+    color: pink;
+    text-shadow: 0 0 14px pink;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 3px;
+    line-height: 1px;
+    text-transform: uppercase;
+}
+.footercols ul{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+
+}
+.footercols ul li{
+    text-align: left;
+}
+.footercols ul li a{
+    text-decoration: none;
+    color: rgba(121, 121, 121, 0.7);
+    letter-spacing: 1px;
+    font-weight:700;
+    transition: 0.61s;
+
+}
+.footercols ul li a:hover{
+    color: cyan;
+    text-shadow: 0 0 5px cyan;
+}
+.footercols ul li a span{
+    animation: ConnectCycle 8s linear infinite;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    transform-origin: center;
+}
+.footercols ul li a span:hover{
+    animation-play-state: paused;
+    transform: scale(1.1);
+}
+.footerdiv{
+    width: 200px;
+    border-radius: 40px;
+    height: 5px;
+    color: rgb(0, 255, 102);
+    background: linear-gradient(to right,transparent,cyan,transparent);
+    margin: auto;
+    margin-top: 50px;
+
+    box-shadow:
+        0 0 8px rgba(0,229,255,.4),
+        0 0 20px rgba(124,92,255,.25);
+
+}
+@keyframes ConnectCycle {
+
+    0%,100%{
+        color: #ff4fa3;
+        text-shadow:
+        0 0 6px #ff4fa3,
+        0 0 14px #ff4fa3,
+        0 0 28px rgba(255,79,163,.45);
+    }
+    12.5%{
+        color: #ff9f43;
+        text-shadow:
+        0 0 6px #ff9f43,
+        0 0 14px #ff9f43,
+        0 0 28px rgba(255,159,67,.45);
+    }
+    25%{
+        color: #ffd93d;
+        text-shadow:
+        0 0 6px #ffd93d,
+        0 0 14px #ffd93d,
+        0 0 28px rgba(255,217,61,.45);
+    }
+    37.5%{
+        color: #6dff7c;
+        text-shadow:
+        0 0 6px #6dff7c,
+        0 0 14px #6dff7c,
+        0 0 28px rgba(109,255,124,.45);
+    }
+    50%{
+        color: #42e9f5;
+        text-shadow:
+        0 0 6px #42e9f5,
+        0 0 14px #42e9f5,
+        0 0 28px rgba(66,233,245,.45);
+    }
+    62.5%{
+        color: #4d7cff;
+        text-shadow:
+        0 0 6px #4d7cff,
+        0 0 14px #4d7cff,
+        0 0 28px rgba(77,124,255,.45);
+    }
+    75%{
+        color: #9d5cff;
+        text-shadow:
+        0 0 6px #9d5cff,
+        0 0 14px #9d5cff,
+        0 0 28px rgba(157,92,255,.45);
+    }
+    87.5%{
+        color: #ff63e6;
+        text-shadow:
+        0 0 6px #ff63e6,
+        0 0 14px #ff63e6,
+        0 0 28px rgba(255,99,230,.45);
+    }
+}
+
+.TrueSectionHead{
+    font-family: "Orbitron", sans-serif;
+    font-size: 52px;
+    font-weight: 800;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+
+    background: linear-gradient(
+        90deg,
+        #6EE7F9,
+        #00FFD5,
+        #8B5CF6,
+        #FF5ACD,
+        #00FFD5,
+        #6EE7F9
+    );
+
+    background-size: 350% 350%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    animation: AuroraFlow 10s ease-in-out infinite;
+}
+.SectionHead{
+    font-family: "Orbitron", sans-serif;
+    font-weight: 1000;
+    font-size: 50px;
+    color: pink;
+    text-align: center;
+    justify-content: center;
+    margin-top: 100px;
+    text-shadow:
+        0 0 3px rgb(255, 0, 217),
+        0 0 8px #fb71e2,
+        0 0 16px #f91697,
+        0 0 28px rgba(249, 22, 139, 0.25);
+    
+}
+@keyframes AuroraFlow{
+
+    0%{
+        background-position: 0% 50%;
+    }
+
+    25%{
+        background-position: 50% 30%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    75%{
+        background-position: 50% 70%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+
+}
+@keyframes Aurora1Flow{
+    0%   {background-position:0% 50%;}
+    25%  {background-position:40% 20%;}
+    50%  {background-position:100% 50%;}
+    75%  {background-position:60% 80%;}
+    100% {background-position:0% 50%;}
+}
+
+@keyframes Aurora1Glow{
+    from{
+        filter: drop-shadow(0 0 10px rgba(0,255,213,.35));
+    }
+    to{
+        filter: drop-shadow(0 0 22px rgba(255,90,205,.35));
+    }
+}
+.ForecastSectionHead{
+    font-family: "Orbitron", sans-serif;
+    font-size: 52px;
+    font-weight: 800;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+
+    background: linear-gradient(
+        120deg,
+        #00F5D4,
+        #6EE7F9,
+        #7C5CFF,
+        #FF5ACD,
+        #6EE7F9,
+        #00F5D4
+    );
+
+    background-size: 400% 400%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    animation:
+        Aurora1Flow 12s ease-in-out infinite,
+        Aurora1Glow 4s ease-in-out infinite alternate;
+}
+.FooterBottom{
+    margin-top:40px;
+    padding-top:35px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    max-width:1200px;
+    margin-inline:auto;
+
+}
+
+.FooterBottomText{
+    color:rgba(180,180,180,.75);
+
+    font-family:"Orbitron",sans-serif;
+    font-size:13px;
+
+    letter-spacing:2px;
+}
+.MapForecastRow {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 40px;
+}
+.MapContainer, .ForecastContainer {
+  flex: 1;
+  background: rgba(10, 14, 30, 0.6);
+  border-radius: 24px;
+  border: 1px solid rgba(0,255,255,0.2);
+  box-shadow: 0 0 20px rgba(0,255,255,0.08);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.MapLabel {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: cyan;
+  text-shadow: 0 0 8px cyan;
+}
+#weatherMap {
+  height: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0,255,255,0.15);
+}
+/* Dark map tiles */
+.leaflet-tile {
+  filter: invert(1) hue-rotate(180deg) brightness(0.85) saturate(0.7);
+}
+.ForecastDays {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 320px;
+  overflow-y: auto;
+}
+.ForecastEmpty {
+  color: rgba(200,220,255,0.3);
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 120px;
+}
+.ForecastDay {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: rgba(0,255,255,0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(0,255,255,0.1);
+  transition: background 0.2s, border-color 0.2s;
+  cursor: default;
+}
+.ForecastDay:hover {
+  background: rgba(0,255,255,0.1);
+  border-color: rgba(0,255,255,0.3);
+}
+.ForecastDayName {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: cyan;
+  width: 80px;
+}
+.ForecastDayIcon { font-size: 22px; }
+.ForecastDayDesc {
+  font-size: 11px;
+  color: rgba(200,220,255,0.5);
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  flex: 1;
+  text-align: center;
+}
+.ForecastDayTemp {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 13px;
+  color: white;
+  text-align: right;
+}
+.ForecastDayTemp span {
+  color: rgba(200,220,255,0.4);
+  font-size: 11px;
+  margin-left: 4px;
+}
+.ForecastDays::-webkit-scrollbar { width: 4px; }
+.ForecastDays::-webkit-scrollbar-track { background: transparent; }
+.ForecastDays::-webkit-scrollbar-thumb { background: rgba(0,255,255,0.2); border-radius: 99px; }
+
+
+.FeatureSectionHead{
+
+    position: relative;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 56px;
+    font-weight: 900;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+
+    text-align: center;
+
+    color: transparent;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff 0%,
+        #8BE9FD 18%,
+        #00FFD5 35%,
+        #8B5CF6 55%,
+        #FF61B6 72%,
+        #ffffff 100%
+    );
+
+    background-size: 350% 100%;
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    animation:
+    FeatureGradient 6s linear infinite,
+    FeatureGlow 3s ease-in-out infinite alternate;
+}
+@keyframes FeatureGradient{
+
+    from{
+        background-position:0%;
+    }
+
+    to{
+        background-position:350%;
+    }
+
+}
+@keyframes FeatureGlow{
+
+    from{
+
+        filter:drop-shadow(0 0 6px rgba(0,255,255,.25))
+               drop-shadow(0 0 14px rgba(139,92,246,.18));
+
+    }
+
+    to{
+
+        filter:drop-shadow(0 0 10px rgba(255,97,182,.35))
+               drop-shadow(0 0 24px rgba(0,255,213,.25));
+
+    }
+
+}
+.FeaturesSection{
+    padding:140px 0;
+}
+
+.FeatureContainer{
+    width:85%;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:40px;
+}
+.FeatureCard{
+    flex:1 1 260px;
+    padding:40px;
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:28px;
+    transition: 1s;
+    position:relative;
+    overflow:hidden;
+}
+.FeatureCard:hover{
+    transform:translateY(-10px);
+    border-color:#6EE7F9;
+    box-shadow:
+    0 0 20px rgba(110,231,249,.2);
+
+}
+.FeatureIcon{
+    font-size:60px;
+    color:#6EE7F9;
+    text-shadow:
+    0 0 10px #6EE7F9,
+    0 0 25px rgba(110,231,249,.35);
+    transition: 1s;
+}
+.FeatureCard:hover .FeatureIcon{
+    transform: scale(1.4);
+    text-shadow: 0 0 10px cyan;
+}
+.FeatureTitle{
+    margin-top:30px;
+    font-family:"Orbitron",sans-serif;
+    color:white;
+    font-size:24px;
+    letter-spacing:2px;
+}
+.FeatureText{
+    margin-top:18px;
+    color:#A0AEC0;
+    line-height:1.8;
+    font-size:16px;
+}
+.AboutSection{
+padding:160px 0;
+}
+.AboutContainer{
+width:85%;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:120px;
+flex-wrap:wrap;
+}
+.AboutLeft{
+flex:1;
+}
+.AboutLeft p{
+margin-top:40px;
+font-size:18px;
+line-height:2;
+color:#B8C5D6;
+letter-spacing:1px;
+max-width:700px;
+}
+.AboutRight{
+flex:1;
+display:flex;
+justify-content:center;
+}
+.AboutIcon{
+font-size:230px;
+color:#6EE7F9;
+text-shadow:
+0 0 20px #6EE7F9,
+0 0 50px #8B5CF6,
+0 0 90px rgba(255,90,205,.35);
+animation:FloatIcon 5s ease-in-out infinite;
+}
+@keyframes FloatIcon{
+0%,100%{ transform:translateY(0); }
+50%{ transform:translateY(-18px);}
+}
+.On{
+    color:#38bdf8;
+}
+body.LightMode .SectionDark{
+   background-image: url("BGW.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+}
+
+body.LightMode{
+    background-image: url("BGW.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+}

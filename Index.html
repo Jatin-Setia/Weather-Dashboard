@@ -1,0 +1,267 @@
+<html>
+    <head>
+        <title> Weather Web</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        
+    </head>
+    <body>
+        <div class="nav SectionDark">
+            <div id="BrightDark">
+                <i class="fa-solid fa-cloud cloud"></i>
+            </div>
+            <div class="navitems">
+                <a href="#Home">Home</a>
+                <a href="#Forecast">Forecast</a>
+                <a href="#Tech">Technologies</a>
+                <a href="#About">About</a>
+                
+            </div>
+        </div>
+        <section>
+            <div class="HeroHead SectionDark">
+                <div class="displaycontainerblock">
+                    <div class="HeroHeading">
+                        Weather Dashboard
+                    </div>
+                    <div class="HeroSubHeading">
+                        Real-time weather forecasts for any city.
+                    </div>
+                </div>
+                <div class="vrline"></div>
+                <div class="Forecast"> <button> FORECAST</button></div>
+            </div>
+        </section>
+        <div class="Bg SectionDark">
+            <div class="SectionDivider" id="Home"></div>
+        </div>
+        <section class="FeaturesSection SectionDark">
+            <div class="FeatureSectionHead">
+                FEATURES
+            </div>
+            <br><br><br>
+            <div class="FeatureContainer">
+                <div class="FeatureCard reveal">
+                    <i class="fa-solid fa-location-dot FeatureIcon"></i>
+                    <div class="FeatureTitle">
+                        Search Any City
+                    </div>
+                    <div class="FeatureText">
+                        Instantly retrieve accurate weather forecasts for cities across the globe.
+                    </div>
+                </div>
+                <div class="FeatureCard reveal">
+                    <i class="fa-solid fa-cloud-sun FeatureIcon"></i>
+                    <div class="FeatureTitle">
+                        Live Weather
+                    </div>
+                    <div class="FeatureText">
+                        Real-time temperature, humidity, wind speed and weather conditions.
+                    </div>
+                </div>
+                <div class="FeatureCard reveal">
+                    <i class="fa-solid fa-temperature-half FeatureIcon"></i>
+                    <div class="FeatureTitle">
+                        Unit Conversion
+                    </div>
+                    <div class="FeatureText">
+                        Switch between Celsius and Fahrenheit instantly with one click.
+                    </div>
+                </div>
+                <div class="FeatureCard reveal">
+                    <i class="fa-solid fa-bolt FeatureIcon"></i>
+                    <div class="FeatureTitle">
+                        Fast API
+                    </div>
+                    <div class="FeatureText">
+                        Weather data is fetched in real time using the OpenWeather API.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="AboutSection SectionDark">
+            <div class="AboutContainer">
+            <div class="AboutLeft reveal">
+            <div class="ForecastSectionHead FloatIcon">
+            ABOUT THE PROJECT
+            </div>
+            <p>
+            Weather Dashboard is a futuristic web application designed to provide accurate real-time weather forecasts for any city in the world.
+            Using the OpenWeather API, the application fetches live weather information and presents it through a modern glassmorphism interface enhanced with smooth animations and dynamic effects.
+            The project was built to combine clean UI design with practical functionality while demonstrating frontend development skills using HTML, CSS and JavaScript.
+            </p>
+            </div>
+            <div class="AboutRight reveal">
+            <i class="fa-solid fa-cloud-sun-rain AboutIcon"></i>
+            </div>
+            </div>
+            </section>
+        <div class="Bg SectionDark"><div class="SectionDivider" id="Forecast"></div></div>
+        <section class="SectionDark">
+            <div class="WeatherContainerBlock">
+                <div class="ForecastSectionHead"> FORECAST</div>
+                <div class="SearchWrapper">
+                    <input type="text" class="SearchBar" placeholder="Enter City Name..." id="LocInput">
+                    <button class="srchbtn" id="SrchBtn">   
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <div class="glass">
+                    <div class="JCSB">
+                        <div class="Loc" id="Location">_____</div>
+                        <div class="WeatherDesc" id="Desc">    </div>
+                    </div>
+                    <div class="Date" id="DateText">__ _______ , ____</div>
+                    <div class="TempContainer">
+                        <div> <button class="TempC" id="TempC">°C</button></div>
+                        <div class="BigTemp" id="Temperature">__°</div>
+                        <div><button class="TempF" id="TempF">°F</button></div>
+                    </div>
+                    <div class="ContainerFlexCards">
+                        <div class="Card">
+                            <i class="fa-solid fa-droplet CardIcon"></i>
+                            <div class="CardTitle">Humidity</div>
+                            <div class="CardFetch" id="Humidity">__</div>
+                        </div>
+                        <div class="Card">
+                            <i class="fa-solid fa-wind CardIcon"></i>
+                            <div class="CardTitle">Wind</div>
+                            <div class="CardFetch" id="Wind">__</div>
+                        </div>
+                        <div class="Card">
+                            <i class="fa-solid fa-temperature-half CardIcon"></i>
+                            <div class="CardTitle">FeelsLike</div>
+                            <div class="CardFetch" id="FeelsLike">__</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="MapForecastRow">
+                    <div class="MapContainer">
+                        <div class="MapLabel">📍 Location Map</div>
+                        <div id="weatherMap"></div>
+                    </div>
+                    <div class="ForecastContainer">
+                        <div class="MapLabel">📅 7-Day Forecast</div>
+                        <div class="ForecastDays" id="ForecastDays">
+                        <div class="ForecastEmpty">Search a city to see the forecast</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+        </section>
+        <div class="Bg SectionDark">
+        <div class="SectionDivider" id="Tech"></div>
+        </div>
+        <section class="SectionDark">
+            <div>
+                <div class="InfoSection">
+                    <div class="TrueSectionHead">
+                        TECHNOLOGIES USED
+                    </div>
+                    <div class="ContainerCards"> 
+                        <div class="GlassCard" id="GlassC">
+                            <div class="Gicon">
+                                <i class="fa-solid fa-code" style="color:#e44d26;text-shadow:0 0 12px #e44d26,0 0 24px rgba(228,77,38,0.4)"></i>
+                            </div>
+                            <div class="Gtitle">
+                                html
+                            </div>
+                            <div class="Gtext">
+                                The backbone of every webpage. Defines the skeleton — headings, sections, cards, and content blocks that hold everything together.
+                            </div>
+                        </div>
+                        <div class="GlassCard" id="GlassC">
+                            <div class="Gicon">
+                                <i class="fa-solid fa-wand-magic-sparkles" style="color:#38bdf8;text-shadow:0 0 12px #38bdf8,0 0 24px rgba(56,189,248,0.4)"></i>
+                            </div>
+                            <div class="Gtitle">
+                                css
+                            </div>
+                            <div class="Gtext">
+                                From glassmorphism cards to glowing text shadows and keyframe animations — CSS is what makes the weather app look alive.
+                            </div>
+                        </div>
+                        <div class="GlassCard" id="GlassC">
+                            <div class="Gicon">
+                                <i class="fa-solid fa-bolt" style="color:#f2c94c;text-shadow:0 0 12px #f2c94c,0 0 24px rgba(242,201,76,0.4)"></i>
+                            </div>
+                            <div class="Gtitle">
+                                JAVASCRIPT
+                            </div>
+                            <div class="Gtext">
+                                Fetches live weather data, handles unit conversion between °C and °F, updates the UI in real time, and brings every click to life.
+                            </div>
+                        </div>
+                        <div class="GlassCard" id="GlassC">
+                            <div class="Gicon">
+                                <i class="fa-solid fa-cloud-sun" style="color:#a78bfa;text-shadow:0 0 12px #a78bfa,0 0 24px rgba(167,139,250,0.4)"></i>
+                            </div>
+                            <div class="Gtitle">
+                                OPENWEATHERAPI
+                            </div>
+                            <div class="Gtext">
+                                Powered by OpenWeatherMap — pulling real-time temperature, humidity, wind speed, and weather conditions for any city on Earth.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+        </section>
+        </div>
+        <footer class="Footer" id="About">
+            <div class="FooterFlex">
+                <div class="Footerbrand">
+                    <div class="BrandName">
+                        WEATHER
+                    </div>
+                    <div class="BrandDef">
+                        Real-time weather forecasts for any city on Earth. Powered by OpenWeatherMap.
+                    </div>
+                </div>
+                <div class="footercols">
+                    <h4> Navigation </h4>
+                    <ul>
+                        <li><a href="#Home">Home</a></li>
+                        <li><a href="#Forecast">Forecast</a></li>
+                        <li><a href="#Tech">Technologies</a></li>
+                    </ul>
+                </div>
+                <div class="footercols">
+                    <h4>Info</h4>
+                    <ul>
+                        <li><a href="">How it Works</a></li>
+                        <li><a href="">API Source</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footercols">
+                    <h4>Connect</h4>
+                        <ul>
+                            <li><a href="#"><span>Linked In</span></a></li>
+                        </ul>
+                </div>
+            </div>
+            <div class="FooterBottom">
+                <div class="FooterBottomText">
+                    © 2026 Weather Dashboard • Designed & Developed by Jatin Setia
+                </div>
+
+                <div class="FooterBottomIcons">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footerdiv"></div>
+        </footer>
+    <script src="Script.js"></script>
+    </body>
+</html>
