@@ -12,15 +12,15 @@
     <body>
         <div class="nav SectionDark">
             <div id="BrightDark">
-                <i class="fa-solid fa-cloud cloud"></i>
+                <i class="fa-solid fa-sun cloud" id="ThemeIcon"></i>
             </div>
             <div class="navitems">
                 <a href="#Home">Home</a>
                 <a href="#Forecast">Forecast</a>
                 <a href="#Tech">Technologies</a>
                 <a href="#About">About</a>
-                
             </div>
+            <div class="LiveTime" id="LiveTime">--:--:--</div>
         </div>
         <section>
             <div class="HeroHead SectionDark">
@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <div class="vrline"></div>
-                <div class="Forecast"> <button> FORECAST</button></div>
+                <div class="Forecast"> <button id="ForecastBtn"> FORECAST</button></div>
             </div>
         </section>
         <div class="Bg SectionDark">
@@ -208,6 +208,17 @@
                             </div>
                             <div class="Gtext">
                                 Powered by OpenWeatherMap — pulling real-time temperature, humidity, wind speed, and weather conditions for any city on Earth.
+                            </div>
+                        </div>
+                        <div class="GlassCard" id="GlassC">
+                            <div class="Gicon">
+                                <i class="fa-solid fa-map-location-dot" style="color:#34d399;text-shadow:0 0 12px #34d399,0 0 24px rgba(52,211,153,0.4)"></i>
+                            </div>
+                            <div class="Gtitle">
+                                LEAFLET.JS
+                            </div>
+                            <div class="Gtext">
+                                Renders the interactive location map and pins the searched city with a custom glowing marker in real time.
                             </div>
                         </div>
                     </div>

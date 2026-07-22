@@ -214,9 +214,27 @@ function get7DayForecast(city) {
     })
     .catch(err => console.log(err));
 }
+
+function updateLiveTime(){
+    const now = new Date();
+    document.getElementById("LiveTime").textContent = now.toLocaleTimeString("en-IN", {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+    });
+}
+updateLiveTime();
+setInterval(updateLiveTime, 1000);
+
+document.getElementById("ForecastBtn").addEventListener("click", () => {
+    document.getElementById("Forecast").scrollIntoView({ behavior: "smooth" });
+});
 const ThemeSwitch = document.getElementById("BrightDark");
+const ThemeIcon = document.getElementById("ThemeIcon");
 
 ThemeSwitch.addEventListener("click", () => {
     ThemeSwitch.classList.toggle("On");
     document.body.classList.toggle("LightMode");
+    ThemeIcon.classList.toggle("fa-sun");
+    ThemeIcon.classList.toggle("fa-moon");
 });

@@ -12,6 +12,7 @@
   .MapForecastRow { flex-direction: column; }
   .FooterFlex { flex-wrap: wrap; gap: 50px; }
   .Footerbrand { margin-left: 0; }
+  .LiveTime{ display: none; }
 }
 
 @media (max-width: 768px) {
@@ -73,7 +74,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    backdrop-filter: contrast(120%) saturate(130%) grayscale(20%) brightness(100%);
+   
 
 }
 .nav{
@@ -82,8 +83,13 @@ body {
     border-spacing: 30px;
     display: flex;
     align-items: center;
+    gap: 100px;
+}
+.navitems{
+    display: flex;
     gap: 200px;
 }
+
 .cloud{
     font-size: 75px;
     color: #000000;
@@ -96,10 +102,7 @@ body {
 .cloud:hover{
     color: cyan;
 }
-.navitems{
-    display: flex;
-    gap: 200px;
-}
+
 
 .navitems a{
     display: flex;
@@ -1131,4 +1134,12 @@ body.LightMode{
     background-repeat: no-repeat;
     background-attachment: fixed;
     scroll-behavior: smooth;
+}
+.LiveTime{
+    margin-left: auto;
+    font-family: "Orbitron", sans-serif;
+    color: cyan;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 6px cyan, 0 0 12px rgba(0,255,255,0.5);
 }
