@@ -1,7 +1,7 @@
 
 @media (max-width: 1024px) {
-  .nav { gap: 60px; padding: 15px; }
-  .navitems { gap: 40px; }
+  .nav { gap: 40px; padding: 15px 20px; flex-wrap: wrap; }
+  .navitems { gap: 30px; }
   .HeroHead { flex-direction: column; padding: 100px 40px; text-align: center; gap: 40px; }
   .vrline { width: 200px; height: 5px; }
   .HeroHeading { font-size: 50px; }
@@ -16,8 +16,9 @@
 }
 
 @media (max-width: 768px) {
-  .navitems { gap: 20px; }
-  .navitems a { font-size: 13px; }
+  .nav { gap: 15px; padding: 12px 15px; flex-wrap: wrap; justify-content: space-between; }
+  .navitems { gap: 14px; flex-wrap: wrap; justify-content: center; }
+  .navitems a { font-size: 12px; }
   .HeroHeading { font-size: 36px; }
   .HeroSubHeading { font-size: 13px; padding: 10px 20px; }
   .Forecast { padding-left: 0; }
@@ -36,9 +37,15 @@
   .Loc { font-size: 20px; top: 25px; }
   .Date { font-size: 14px; top: 60px; }
   .WeatherDesc { font-size: 10px; right: 15px; top: 20px; padding: 6px 8px; }
-  .TempContainer { width: 90%; top: 110px; }
+  .TempContainer {
+    width: 92%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 110px;
+    justify-content: space-between;
+  }
   .BigTemp { font-size: 36px; margin-left: 0; }
-  .TempC, .TempF { height: 45px; width: 45px; font-size: 15px; }
+  .TempC, .TempF { height: 45px; width: 45px; font-size: 15px; flex-shrink: 0; }
   .ContainerFlexCards {
     position: static;
     flex-wrap: wrap;
@@ -59,12 +66,20 @@
 }
 
 @media (max-width: 480px) {
-  .nav { gap: 20px; }
-  .navitems { gap: 12px; }
-  .navitems a { font-size: 11px; }
+  .nav { gap: 10px; padding: 10px 12px; }
+  .cloud { font-size: 50px; }
+  .navitems { gap: 10px; }
+  .navitems a { font-size: 10px; }
   .SearchBar { padding: 12px 45px 12px 15px; font-size: 13px; width: 60vw; }
+  .TempContainer { width: 96%; top: 100px; }
+  .BigTemp { font-size: 30px; }
+  .TempC, .TempF { height: 40px; width: 40px; font-size: 13px; }
 }
 
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
 body {
     margin: 0;
     padding: 0;
