@@ -1,167 +1,3 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-@media (max-width: 1024px) {
-  .nav { gap: 40px; padding: 15px 20px; flex-wrap: wrap; }
-  .navitems { gap: 30px; }
-  .HeroHead { flex-direction: column; padding: 100px 40px; text-align: center; gap: 40px; }
-  .vrline { width: 200px; height: 5px; }
-  .HeroHeading { font-size: 50px; }
-  .HeroSubHeading { padding: 20px 40px; }
-  .ContainerCards { gap: 60px; }
-  .AboutContainer { gap: 60px; }
-  .AboutIcon { font-size: 150px; }
-  .MapForecastRow { flex-direction: column; }
-  .FooterFlex { flex-wrap: wrap; gap: 50px; }
-  .Footerbrand { margin-left: 0; }
-  .LiveTime{ display: none; }
-  .WeatherContainerBlock { gap: 70px; }
-}
-
-@media (max-width: 768px) {
-  .nav { gap: 15px; padding: 12px 15px; flex-wrap: wrap; justify-content: space-between; }
-  .navitems { gap: 14px; flex-wrap: wrap; justify-content: center; }
-  .navitems a { font-size: 12px; }
-  .HeroHeading { font-size: 34px; letter-spacing: 1px; }
-  .HeroSubHeading { font-size: 13px; padding: 10px 20px; }
-  .Forecast { padding-left: 0; }
-  .Forecast button { padding: 20px 35px; font-size: 16px; }
-
-  /* Section titles: keep them centered, wrapped, and inside the viewport */
-  .SectionHead, .TrueSectionHead, .ForecastSectionHead, .FeatureSectionHead {
-    font-size: 26px;
-    letter-spacing: 2px;
-    text-align: center;
-    padding: 0 20px;
-    line-height: 1.3;
-    word-spacing: normal;
-  }
-
-  .WeatherContainerBlock { gap: 45px; }
-
-  /* Weather card: switch from fixed-pixel absolute positioning to a normal
-     flex column so nothing can overlap or spill out on small screens */
-  .glass {
-    width: 92vw;
-    max-width: 420px;
-    height: auto;
-    min-height: unset;
-    padding: 26px 20px 22px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  .JCSB {
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-  .Loc {
-    position: static;
-    font-size: 20px;
-    max-width: 100%;
-    overflow-wrap: break-word;
-  }
-  .Date {
-    position: static;
-    font-size: 13px;
-  }
-  .WeatherDesc {
-    position: static;
-    font-size: 10px;
-    padding: 6px 8px;
-    align-self: flex-start;
-    white-space: normal;
-    max-width: 100%;
-  }
-  .TempContainer {
-    position: static;
-    width: 100%;
-    left: auto;
-    top: auto;
-    transform: none;
-    justify-content: space-between;
-  }
-  .BigTemp { font-size: 36px; margin-left: 0; }
-  .TempC, .TempF { height: 45px; width: 45px; font-size: 15px; flex-shrink: 0; }
-  .ContainerFlexCards {
-    position: static;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 0;
-    padding: 0;
-  }
-  .Card {
-    height: auto;
-    min-height: 95px;
-    width: auto;
-    flex: 1 1 28%;
-    max-width: 110px;
-    padding: 8px 4px 10px;
-  }
-  .CardTitle { font-size: 10px; letter-spacing: 1px; overflow-wrap: break-word; }
-  .CardFetch { font-size: 20px; overflow-wrap: break-word; }
-  .ContainerCards { gap: 30px; }
-  .GlassCard { width: 85vw; max-width: 340px; height: 340px; }
-  .FeatureContainer { gap: 20px; }
-  .FeatureCard { padding: 25px; }
-  .AboutContainer { flex-direction: column; text-align: center; }
-  .AboutIcon { font-size: 100px; }
-  .FooterFlex { flex-direction: column; gap: 30px; padding-top: 30px; }
-  .footercols { align-items: center; }
-
-  /* Map + forecast list: give them breathing room instead of overlapping */
-  .MapForecastRow { gap: 20px; margin-top: 30px; }
-  .MapContainer, .ForecastContainer { padding: 16px; width: 100%; }
-  #weatherMap { height: 240px; }
-  .ForecastDays { height: 240px; }
-}
-
-@media (max-width: 480px) {
-  .nav { gap: 10px; padding: 10px 12px; }
-  .cloud { font-size: 50px; }
-  .navitems { gap: 10px; }
-  .navitems a { font-size: 10px; }
-  .SearchBar { padding: 12px 45px 12px 15px; font-size: 13px; width: 70vw; }
-
-  .HeroHeading { font-size: 26px; letter-spacing: 0.5px; }
-  .HeroSubHeading { padding: 15px 15px; font-size: 12px; }
-
-  .SectionHead, .TrueSectionHead, .ForecastSectionHead, .FeatureSectionHead {
-    font-size: 19px;
-    letter-spacing: 1px;
-    padding: 0 12px;
-  }
-
-  .glass { padding: 20px 14px 18px; gap: 12px; max-width: 95vw; }
-  .Loc { font-size: 16px; }
-  .Date { font-size: 11px; }
-  .WeatherDesc { font-size: 9px; padding: 5px 7px; }
-  .TempContainer { width: 100%; }
-  .BigTemp { font-size: 30px; }
-  .TempC, .TempF { height: 40px; width: 40px; font-size: 13px; }
-  .ContainerFlexCards { gap: 8px; }
-  .Card { flex: 1 1 27%; max-width: 95px; min-height: 85px; padding: 6px 3px 8px; }
-  .CardIcon { font-size: 22px; margin-top: 8px; margin-bottom: 5px; }
-  .CardTitle { font-size: 9px; letter-spacing: 0.5px; }
-  .CardFetch { font-size: 17px; }
-
-  .MapContainer, .ForecastContainer { padding: 12px; }
-  #weatherMap { height: 200px; }
-  .ForecastDays { height: 200px; }
-  .ForecastDayName { width: 60px; font-size: 10px; }
-  .ForecastDayDesc { font-size: 10px; }
-  .ForecastDayTemp { font-size: 12px; }
-
-  .FeatureCard { padding: 18px; }
-  .AboutIcon { font-size: 70px; }
-  .Footerbrand { margin-left: 0; }
-}
-
 html, body {
     overflow-x: hidden;
     max-width: 100%;
@@ -1243,4 +1079,168 @@ body.LightMode{
     font-size: 16px;
     letter-spacing: 2px;
     text-shadow: 0 0 6px cyan, 0 0 12px rgba(0,255,255,0.5);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .nav { gap: 40px; padding: 15px 20px; flex-wrap: wrap; }
+  .navitems { gap: 30px; }
+  .HeroHead { flex-direction: column; padding: 100px 40px; text-align: center; gap: 40px; }
+  .vrline { width: 200px; height: 5px; }
+  .HeroHeading { font-size: 50px; }
+  .HeroSubHeading { padding: 20px 40px; }
+  .ContainerCards { gap: 60px; }
+  .AboutContainer { gap: 60px; }
+  .AboutIcon { font-size: 150px; }
+  .MapForecastRow { flex-direction: column; }
+  .FooterFlex { flex-wrap: wrap; gap: 50px; }
+  .Footerbrand { margin-left: 0; }
+  .LiveTime{ display: none; }
+  .WeatherContainerBlock { gap: 70px; }
+}
+
+@media (max-width: 768px) {
+  .nav { gap: 15px; padding: 12px 15px; flex-wrap: wrap; justify-content: space-between; }
+  .navitems { gap: 14px; flex-wrap: wrap; justify-content: center; }
+  .navitems a { font-size: 12px; }
+  .HeroHeading { font-size: 34px; letter-spacing: 1px; }
+  .HeroSubHeading { font-size: 13px; padding: 10px 20px; }
+  .Forecast { padding-left: 0; }
+  .Forecast button { padding: 20px 35px; font-size: 16px; }
+
+  /* Section titles: keep them centered, wrapped, and inside the viewport */
+  .SectionHead, .TrueSectionHead, .ForecastSectionHead, .FeatureSectionHead {
+    font-size: 26px;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 0 20px;
+    line-height: 1.3;
+    word-spacing: normal;
+  }
+
+  .WeatherContainerBlock { gap: 45px; }
+
+  /* Weather card: switch from fixed-pixel absolute positioning to a normal
+     flex column so nothing can overlap or spill out on small screens */
+  .glass {
+    width: 92vw;
+    max-width: 420px;
+    height: auto;
+    min-height: unset;
+    padding: 26px 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .JCSB {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .Loc {
+    position: static;
+    font-size: 20px;
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+  .Date {
+    position: static;
+    font-size: 13px;
+  }
+  .WeatherDesc {
+    position: static;
+    font-size: 10px;
+    padding: 6px 8px;
+    align-self: flex-start;
+    white-space: normal;
+    max-width: 100%;
+  }
+  .TempContainer {
+    position: static;
+    width: 100%;
+    left: auto;
+    top: auto;
+    transform: none;
+    justify-content: space-between;
+  }
+  .BigTemp { font-size: 36px; margin-left: 0; }
+  .TempC, .TempF { height: 45px; width: 45px; font-size: 15px; flex-shrink: 0; }
+  .ContainerFlexCards {
+    position: static;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 0;
+    padding: 0;
+  }
+  .Card {
+    height: auto;
+    min-height: 95px;
+    width: auto;
+    flex: 1 1 28%;
+    max-width: 110px;
+    padding: 8px 4px 10px;
+  }
+  .CardTitle { font-size: 10px; letter-spacing: 1px; overflow-wrap: break-word; }
+  .CardFetch { font-size: 20px; overflow-wrap: break-word; }
+  .ContainerCards { gap: 30px; }
+  .GlassCard { width: 85vw; max-width: 340px; height: 340px; }
+  .FeatureContainer { gap: 20px; }
+  .FeatureCard { padding: 25px; }
+  .AboutContainer { flex-direction: column; text-align: center; }
+  .AboutIcon { font-size: 100px; }
+  .FooterFlex { flex-direction: column; gap: 30px; padding-top: 30px; }
+  .footercols { align-items: center; }
+
+  /* Map + forecast list: give them breathing room instead of overlapping */
+  .MapForecastRow { gap: 20px; margin-top: 30px; }
+  .MapContainer, .ForecastContainer { padding: 16px; width: 100%; }
+  #weatherMap { height: 240px; }
+  .ForecastDays { height: 240px; }
+}
+
+@media (max-width: 480px) {
+  .nav { gap: 10px; padding: 10px 12px; }
+  .cloud { font-size: 50px; }
+  .navitems { gap: 10px; }
+  .navitems a { font-size: 10px; }
+  .SearchBar { padding: 12px 45px 12px 15px; font-size: 13px; width: 70vw; }
+
+  .HeroHeading { font-size: 26px; letter-spacing: 0.5px; }
+  .HeroSubHeading { padding: 15px 15px; font-size: 12px; }
+
+  .SectionHead, .TrueSectionHead, .ForecastSectionHead, .FeatureSectionHead {
+    font-size: 19px;
+    letter-spacing: 1px;
+    padding: 0 12px;
+  }
+
+  .glass { padding: 20px 14px 18px; gap: 12px; max-width: 95vw; }
+  .Loc { font-size: 16px; }
+  .Date { font-size: 11px; }
+  .WeatherDesc { font-size: 9px; padding: 5px 7px; }
+  .TempContainer { width: 100%; }
+  .BigTemp { font-size: 30px; }
+  .TempC, .TempF { height: 40px; width: 40px; font-size: 13px; }
+  .ContainerFlexCards { gap: 8px; }
+  .Card { flex: 1 1 27%; max-width: 95px; min-height: 85px; padding: 6px 3px 8px; }
+  .CardIcon { font-size: 22px; margin-top: 8px; margin-bottom: 5px; }
+  .CardTitle { font-size: 9px; letter-spacing: 0.5px; }
+  .CardFetch { font-size: 17px; }
+
+  .MapContainer, .ForecastContainer { padding: 12px; }
+  #weatherMap { height: 200px; }
+  .ForecastDays { height: 200px; }
+  .ForecastDayName { width: 60px; font-size: 10px; }
+  .ForecastDayDesc { font-size: 10px; }
+  .ForecastDayTemp { font-size: 12px; }
+
+  .FeatureCard { padding: 18px; }
+  .AboutIcon { font-size: 70px; }
+  .Footerbrand { margin-left: 0; }
 }
