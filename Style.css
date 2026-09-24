@@ -54,11 +54,15 @@
   }
   .JCSB {
     width: 100%;
+    flex-direction: column;
     align-items: flex-start;
+    gap: 8px;
   }
   .Loc {
     position: static;
     font-size: 20px;
+    max-width: 100%;
+    overflow-wrap: break-word;
   }
   .Date {
     position: static;
@@ -68,7 +72,9 @@
     position: static;
     font-size: 10px;
     padding: 6px 8px;
-    white-space: nowrap;
+    align-self: flex-start;
+    white-space: normal;
+    max-width: 100%;
   }
   .TempContainer {
     position: static;
@@ -85,11 +91,20 @@
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     margin-top: 0;
     padding: 0;
   }
-  .Card { height: 100px; width: 90px; }
+  .Card {
+    height: auto;
+    min-height: 95px;
+    width: auto;
+    flex: 1 1 28%;
+    max-width: 110px;
+    padding: 8px 4px 10px;
+  }
+  .CardTitle { font-size: 10px; letter-spacing: 1px; overflow-wrap: break-word; }
+  .CardFetch { font-size: 20px; overflow-wrap: break-word; }
   .ContainerCards { gap: 30px; }
   .GlassCard { width: 85vw; max-width: 340px; height: 340px; }
   .FeatureContainer { gap: 20px; }
@@ -129,10 +144,11 @@
   .TempContainer { width: 100%; }
   .BigTemp { font-size: 30px; }
   .TempC, .TempF { height: 40px; width: 40px; font-size: 13px; }
-  .ContainerFlexCards { gap: 10px; }
-  .Card { width: 80px; height: 90px; }
-  .CardTitle { font-size: 11px; }
-  .CardFetch { font-size: 24px; }
+  .ContainerFlexCards { gap: 8px; }
+  .Card { flex: 1 1 27%; max-width: 95px; min-height: 85px; padding: 6px 3px 8px; }
+  .CardIcon { font-size: 22px; margin-top: 8px; margin-bottom: 5px; }
+  .CardTitle { font-size: 9px; letter-spacing: 0.5px; }
+  .CardFetch { font-size: 17px; }
 
   .MapContainer, .ForecastContainer { padding: 12px; }
   #weatherMap { height: 200px; }
